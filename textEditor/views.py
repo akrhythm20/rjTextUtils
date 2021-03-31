@@ -6,13 +6,13 @@ def home(request):
     # return HttpResponse('Home')
 def analyze(request):
     # Get the text
-    djtext = request.POST.get('text','default')
+    djtext = request.GET.get('text','default')
 
     # Check checkbox values
-    rempunc = request.POST.get('removepunc', 'off')
-    fullcaps = request.POST.get('fullcaps', 'off')
-    newlineremover = request.POST.get('newlineremover', 'off')
-    spaceremover = request.POST.get('spaceremover', 'off')
+    rempunc = request.GET.get('removepunc', 'off')
+    fullcaps = request.GET.get('fullcaps', 'off')
+    newlineremover = request.GET.get('newlineremover', 'off')
+    spaceremover = request.GET.get('spaceremover', 'off')
 
     # Check which checkbox is on
     if rempunc == "on":
